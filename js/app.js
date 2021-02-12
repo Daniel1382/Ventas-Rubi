@@ -81,7 +81,7 @@ goTop.addEventListener('click', () => {
      
 });
 
-let abajo = document.querySelector('.welcome');
+let abajo = document.querySelector('#abajo');
 
 abajo.addEventListener('click', () => {
   document.body.scrollTop = 600;
