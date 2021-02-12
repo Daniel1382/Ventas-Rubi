@@ -1,0 +1,630 @@
+:root{
+    --red:pink;
+    --black:black;
+    --blue:blue;
+    --white:white;
+    --purple:purple;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: white;
+    overflow-x: hidden;
+}
+
+/* GO TOP */
+
+.GO-TOP{
+    position: fixed;
+    bottom: 100px;
+    right: -100;
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--red);
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+    z-index: 9999;
+}
+
+.GO-TOP > span{
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.GO-TOP > span:hover{
+    color: purple;
+    position: fixed;
+    bottom: 100px;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--purple);
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GO TOP */
+
+
+/* Menu de navegacion */
+#header{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu .logo-box{
+    margin-left: 20px;
+}
+
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.menu .list-container{
+    margin-right: 20px;
+}
+
+.menu .list-container .lists{
+    display:flex;
+}
+
+.menu .list-container .lists li{
+    list-style: none;
+}
+
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu .list-container .lists li a.activo{
+    background: var(--red);
+    color: #fff;
+}
+
+.menu .list-container .lists li a:hover{
+    background: var(--purple);
+    color: #fff;
+}
+
+
+.btn-menu > .bx-menu{
+    display: none;
+}
+
+.btn-menu > .bx-menu:hover{
+    color: purple;
+}
+/* Menu de navegacion */
+
+/* IMG header */
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vw;
+    background: url(../img/header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-header .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #323232b7 0%, #3f3f3f96 40%, #1c1c1c94 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-blend-mode: multiply;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-header .welcome h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.img-header .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+
+.img-header .welcome p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.img-header .welcome >button{
+    width: 170px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.img-header .welcome >button:hover{
+    background: var(--purple);
+    color: #fff;
+}
+/* IMG header */
+
+/* Acerca de nosotros */
+.acerca-de{
+    width: 100%;
+    margin-top: 120px;
+
+}
+
+.acerca-de .info-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.acerca-de .info-container h1{
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.acerca-de .info-container p{
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0px;
+}
+/* Acerca de nosotros */
+
+/* Galeria */
+.acerca-de .info-container .about-gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+
+}
+
+.acerca-de .info-container .about-gallery img{
+    width: calc(33.33% - 10px);
+    height: 300px;
+    object-fit: cover;
+    margin: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.acerca-de .info-container .about-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.acerca-de .info-container .about-more button{
+    width: 120px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.acerca-de .info-container .about-more button:hover{
+    background: var(--purple);
+    color: #fff;
+}
+/* Galeria */
+
+/* Nuestros proyectos */
+.our-projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/perfumes.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+
+.our-projects .deg-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.our-projects .ejeZproject{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.our-projects .container-project{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.our-projects .container-project .project-title{
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.our-projects .container-project .project-title h2{
+    font-size: 40px;
+    color: white;
+    font-weight: normal;
+}
+
+.our-projects .container-project .project-title hr{
+    background: white;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.our-projects .container-project .project-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+.our-projects .container-project .project-img >img{
+    width: calc(30% - 10px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;   
+}
+/* Nuestros proyectos */
+
+/* Testimonio */
+.testimonios{
+    width: 100%;
+    margin-top: 120px;
+}
+
+.testimonios .testimonios-title{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonios .testimonios-title h2{
+    font-size: 50px;
+    color: var(--black);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.testimonios .testimonios-title hr{
+    width: 60%;
+    margin: auto;
+    height: 2px;
+    background: var(--black);
+    border: none;
+}
+
+.testimonios .box-testimonios{
+    width: 90%;
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonios .box-testimonios .card-testimonio{
+    width: 45%;
+    margin: 20px;
+}
+
+.testimonios .box-testimonios .card-testimonio .card-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.testimonios .box-testimonios .card-testimonio .card-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.testimonios .box-testimonios .card-testimonio .testimonio-test{
+    width: 100%;
+    border: 3px solid var(--red);
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.testimonios .box-testimonios .card-testimonio .testimonio-test h4{
+    color: var(--purple);
+    font-weight: normal;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+
+.testimonios .box-testimonios .card-testimonio .testimonio-test p{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    line-height: 35px;
+    transition: 200mx;
+}
+
+.testimonios .box-testimonios .card-testimonio .testimonio-test:hover{
+    border: 2px solid var(--blue);
+}
+
+.testimonios .box-testimonios .card-testimonio .testimonio-test:hover h4{
+    color:var(--blue);
+}
+/* Testimonio */
+
+/* Footer */
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/footer.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.footer .deg-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.footer .footer-content{
+    padding-top: 100px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+.footer .footer-content .footer-title{
+    width: 50%;
+    margin: auto;
+    border: 2px solid white;
+}
+.footer .footer-content .footer-title h2{
+    width: 50%;
+    margin: 10px auto;
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+}
+.footer .footer-content .footer-title hr{
+    width: 80%;
+    margin:20px auto;    
+}
+.footer .footer-content .formulario-content{
+    width: 60%;
+    margin: 50px auto;
+    background: #fff;
+    padding:30px;
+    border-radius: 50px;
+    border: 1.5px solid var(--red);
+}
+.footer .footer-content .formulario-content #formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer .footer-content .formulario-content #formulario label{
+    font-size: 20px;
+    text-align: center;
+    color: var(--black);
+    margin: 30px 0px 10px 0px;
+}
+.footer .footer-content .formulario-content #formulario input{
+    width: 90%;
+    height: 40px;
+    margin:auto;
+    border-radius: 24px;
+    outline: none;
+    border:1.5px solid var(--purple);
+    text-align: center;
+    font-size: 18px;
+    color: var(--black);
+}
+.footer .footer-content .formulario-content #formulario textarea{
+    width: 90%;
+    height: 200px;
+    margin:auto;
+    padding: 20px;
+    border-radius: 24px;
+    outline: none;
+    border:1.5px solid var(--purple);
+    font-size: 15px;
+    color: var(--black);
+}
+
+.footer .formulario-content #formulario .mensaje-form{
+    width: 100%;
+    margin:auto;
+    padding:20px;
+}
+
+.footer .formulario-content #formulario .mensaje-form p{
+    font-size:19px;
+    color: var(--black);
+    line-height: 35px;
+    align-content: center;
+    text-align: center;
+}
+
+.footer .footer-content .formulario-content #formulario .send{
+    width: 100%;
+    display: flex;
+    margin: 30px 0px;
+    justify-content: center;
+
+}
+.footer .footer-content .formulario-content #formulario .send button{
+    width: 170px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.footer .footer-content .formulario-content #formulario .send button:hover{
+    font-size:19px;
+    line-height: 35px;
+    background: var(--purple);
+}
+.footer .footer-content .footer-text{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background:rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #fff;
+}
+.footer .footer-content .footer-text p{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+/* Footer */
+
+/* Media query */
+
+@media only screen and (max-width:900px){
+    .btn-menu > .bx-menu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .menu .list-container{
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: white;
+    }
+    .menu .list-container .lists{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid var(--red);
+        width: 100%;
+        height: 100%;
+
+    }
+    .menu .list-container .lists li{
+        width: 90%;
+        margin: 10px 0px;
+        border-bottom: 1px solid var(--red);
+        text-align: center;
+    }
+    .menu .list-container .lists li a{
+        font-size: 20px;
+
+    }
+    .menu .list-container .lists li a.activo{
+        background: none;
+        color: var(--purple);
+    }
+    .menu .list-container .lists li a:hover{
+        background: none;
+        color: var(--blue);
+    }
+}
